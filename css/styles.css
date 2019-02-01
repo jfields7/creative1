@@ -245,3 +245,20 @@ article h1, article h2{
 .spacer{
   padding-bottom: 1rem;
 }
+
+.article-comments{
+  padding-top: 1rem;
+  padding-right: 10%;
+}
+
+.comment{
+  width: 90%;
+  margin-left: 10%;
+  border-top: solid;
+  border-top-width: 1px;
+  border-top-color: black;
+}
+
+.comment small{
+  padding-left: 1rem;
+}

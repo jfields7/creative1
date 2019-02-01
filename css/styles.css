@@ -1,12 +1,12 @@
 html{
-  margin-top: 55px;
   height: 100%;
-  margin-bottom: 60px;
   width: 100%;
 }
 body{
+  margin-top: 55px;
   height: 100%;
   font-family: 'Oswald', sans-serif !important;
+  margin-bottom: 60px;
 }
 
 section{
@@ -74,6 +74,10 @@ article h1, article h2{
   padding-left: 1rem;
   padding-right: 1rem;
   padding-bottom: 1rem;
+  padding-top: 1rem;
+  border-bottom-style: solid;
+  border-bottom-color: black;
+  border-bottom-width: 1px;
 }
 
 .article-sidebar img{
@@ -81,8 +85,14 @@ article h1, article h2{
   width: 50%;
   height: auto;
   float: left;
-  padding-right: 1rem;
   transition: box-shadow 0.1s linear;
+}
+
+.image a{
+  width: 50%;
+  height: auto;
+  float: left;
+  margin-right: 1rem;
 }
 
 .article-sidebar img:hover{
@@ -98,6 +108,8 @@ article h1, article h2{
     height: 100%;
     max-width: 20%;
     order: 1;
+    border-right-style: solid;
+    border-right-width: 1px;
   }
   article{
     order: 2;

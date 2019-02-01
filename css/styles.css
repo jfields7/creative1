@@ -3,24 +3,26 @@ html{
   width: 100%;
 }
 body{
-  margin-top: 55px;
+  /*margin-top: 55px;*/
   height: 100%;
   font-family: 'Oswald', sans-serif !important;
-  margin-bottom: 60px;
+  /*margin-bottom: 60px;*/
 }
 
 section{
   display: flex;
   height: 100%;
   flex-direction: column;
+  padding-bottom: 59px;
 }
 
 section p, section h1, section h2{
   padding-left: 1rem;
 }
 
-a, .nav-itme a, .footer a{
+a, .nav-item a, .footer a{
   transition: text-shadow 0.1s linear !important;
+  transition: color 0.1s linear;
 }
 
 a:hover, .nav-item a:hover, .footer a:hover{
@@ -56,23 +58,80 @@ article{
   order: 1;
 }
 
+.front-page{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+}
+
+.article-main{
+  flex: 3;
+  order: 1;
+  object-fit: contain;
+}
+
+.article-main h1, h4, .article-open h1{
+  text-align: left;
+}
+.article-open{
+  object-fit: contain;
+  text-align: left;
+  width: 100%;
+  margin: auto;
+}
+
+.article-side{
+  flex: 2;
+  order: 2;
+  object-fit: contain;
+}
+
+.article-main img{
+  width: 100%;
+}
+
+.article-side img{
+  width: 100%;
+}
+
+.article-side h2, h5{
+  text-align: left;
+}
+
+aside h2{
+  margin-right: 1rem;
+  margin-left: 1rem;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 1rem;
+  margin-bottom: 0;
+  border-bottom-style: solid;
+  border-bottom-color: black;
+  border-bottom-width: 1px;
+}
+
 article h1, article h2{
   text-align: center;
-  width: 100%;
+  width: 80%;
   margin: auto;
 }
 
 .heading{
   text-align: center;
-  width: 100%
+  width: 90%;
   margin: auto;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  border-bottom-style: solid;
+  border-bottom-color: black;
+  border-bottom-width: 1px;
 }
 
 .article-sidebar{
-  width: 100%;
+  width: 90%;
   overflow: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  margin: auto;
   padding-bottom: 1rem;
   padding-top: 1rem;
   border-bottom-style: solid;
@@ -82,17 +141,17 @@ article h1, article h2{
 
 .article-sidebar img{
   object-fit: contain;
-  width: 50%;
+  width: 100%;
   height: auto;
-  float: left;
   transition: box-shadow 0.1s linear;
 }
 
-.image a{
+.image{
   width: 50%;
-  height: auto;
+  padding-right: 1rem;
+  object-fit: contain;
+  overflow: auto;
   float: left;
-  margin-right: 1rem;
 }
 
 .article-sidebar img:hover{
@@ -101,6 +160,32 @@ article h1, article h2{
 
 /* Desktop/Large Screens */
 @media only screen and (min-width: 600px){
+  .heading{
+    width: 80%;
+  }
+  .front-page{
+    flex-direction: row;
+    width: 80%;
+  }
+  .article-main img, .article-open img{
+    width: 50%;
+    float: left;
+    padding-right: 1rem;
+  }
+  .article-open{
+    width: 80%;
+  }
+  .article-main{
+    padding-right: 1rem;
+  }
+  .article-side{
+    padding-left: 1rem;
+  }
+  .article-side img{
+    width: 50%;
+    float: left;
+    padding-right: 1rem;
+  }
   section{
     flex-direction: row;
   }
@@ -124,16 +209,17 @@ article h1, article h2{
 }
 
 .footer{
-  position: fixed;
-  left: 0;
+  position: absolute;
   bottom: 0;
   width: 100%;
   height: 60px;
   line-height: 60px;
   transition: box-shadow 0.1s linear;
+  padding-bottom: 8px;
 }
 .footer:hover{
   box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+  color: rgba(255,255,255,0.8);
 }
 
 .footer a:link{
@@ -144,6 +230,18 @@ article h1, article h2{
   color: rgba(255,255,255,0.5);
 }
 
-.footer a:hover{
-  color: rgba(255,255,255,0.8);
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#container{
+  min-height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.spacer{
+  padding-bottom: 1rem;
 }

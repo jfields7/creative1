@@ -1,5 +1,12 @@
 html{
-  margin-top: 60px;
+  margin-top: 55px;
+  height: 100%;
+  margin-bottom: 60px;
+  width: 100%;
+}
+body{
+  height: 100%;
+  font-family: 'Oswald', sans-serif !important;
 }
 
 section{
@@ -8,12 +15,78 @@ section{
   flex-direction: column;
 }
 
+section p, section h1, section h2{
+  padding-left: 1rem;
+}
+
+a, .nav-itme a, .footer a{
+  transition: text-shadow 0.1s linear !important;
+}
+
+a:hover, .nav-item a:hover, .footer a:hover{
+  text-shadow: 0px 0px 5px rgba(0,0,0,0.25);
+}
+
+section a:link{
+  color: rgba(0,0,0,0.5);
+}
+
+section a:visited{
+  color: rgba(0,0,0,0.5);
+}
+
+section a:hover{
+  color: rgba(0,0,0,0.75);
+  text-decoration: none;
+}
+
 aside{
   flex: 1;
+  background-color: #aaa;
+  order: 2;
+  transition: box-shadow 0.1s linear;
+}
+
+aside:hover{
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
 }
 
 article{
   flex: 4;
+  order: 1;
+}
+
+article h1, article h2{
+  text-align: center;
+  width: 100%;
+  margin: auto;
+}
+
+.heading{
+  text-align: center;
+  width: 100%
+  margin: auto;
+}
+
+.article-sidebar{
+  width: 100%;
+  overflow: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+}
+
+.article-sidebar img{
+  object-fit: contain;
+  width: 50%;
+  height: auto;
+  float: left;
+  padding-right: 1rem;
+  transition: box-shadow 0.1s linear;
+}
+
+.article-sidebar img:hover{
+  box-shadow: 0px 0px 5px rgba(0.0,0.0,0.0,0.5);
 }
 
 /* Desktop/Large Screens */
@@ -22,9 +95,20 @@ article{
     flex-direction: row;
   }
   aside{
+    height: 100%;
+    max-width: 20%;
+    order: 1;
   }
   article{
+    order: 2;
   }
+}
+
+.navbar{
+  transition: box-shadow 0.1s linear;
+}
+.navbar:hover{
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
 }
 
 .footer{
@@ -34,4 +118,20 @@ article{
   width: 100%;
   height: 60px;
   line-height: 60px;
+  transition: box-shadow 0.1s linear;
+}
+.footer:hover{
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+}
+
+.footer a:link{
+  color: rgba(255,255,255,0.5);
+}
+
+.footer a:visited{
+  color: rgba(255,255,255,0.5);
+}
+
+.footer a:hover{
+  color: rgba(255,255,255,0.8);
 }

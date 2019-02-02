@@ -1,10 +1,10 @@
 html{
-  height: 100%;
+  min-height: 100%;
   width: 100%;
 }
 body{
   /*margin-top: 55px;*/
-  height: 100%;
+  min-height: 100%;
   font-family: 'Oswald', sans-serif !important;
   /*margin-bottom: 60px;*/
 }

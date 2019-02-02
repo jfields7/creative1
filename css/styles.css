@@ -72,6 +72,10 @@ article{
   object-fit: contain;
 }
 
+.article-open{
+  object-fit: contain;
+}
+
 .article-main h1, h4, .article-open h1{
   text-align: left;
   padding-left: 1rem;
@@ -90,7 +94,7 @@ article{
   object-fit: contain;
 }
 
-.article-main img{
+.article-main img, .article-open img, .article-side img{
   width: 100%;
 }
 
